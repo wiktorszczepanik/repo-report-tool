@@ -1,8 +1,7 @@
-local CONST = {}
+local const = {}
 
-CONST.repo_directory = "../../ctf-writeups"
-CONST.readme_file = "README.md"
-CONST.override_readme_file = false
-CONST.new_readme_file = ""
+const.repo_directory_path = "../../ctf-writeups"
+const.readme_file_path = "../../ctf-writeups/README.md"
+const.black_list = {"README.md"}
 
-return CONST
+return const
