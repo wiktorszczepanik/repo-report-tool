@@ -3,6 +3,9 @@ local source = {}
 function source.get_headers(path)
     local headers = {}
     local file = io.open(path, "r")
+    if file == nil then
+        error("Trying to open incorrect file")
+    end
     local hash_counter = 0
     for line in file:lines() do
         if line:sub(1, 1) == "#" then

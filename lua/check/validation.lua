@@ -1,3 +1,5 @@
+local lfs = require("lfs")
+
 local validate = {}
 
 function validate.readme_attr(filename)

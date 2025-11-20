@@ -1,3 +1,5 @@
+local lfs = require("lfs")
+
 local walker = {}
 
 function walker.get_to_list_all_files(repo_path)
@@ -7,7 +9,7 @@ function walker.get_to_list_all_files(repo_path)
         for file in lfs.dir(path) do
             if file ~= "." and file ~= ".." then
                 local global_file = path .. '/' .. file
-                attr = lfs.attributes(global_file)
+                local attr = lfs.attributes(global_file)
                 if attr.mode == "directory" then
                     req_walk(global_file)
                 else
