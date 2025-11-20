@@ -82,6 +82,7 @@ end
 -- Get unique values
 local count_category = filter.count_unique(category)
 local count_platform = filter.count_unique(platform)
+-- local count_difficulty = filter.count_unique(difficulty)
 
 local count_category_difficulty = filter.count_unique(category_difficulty)
 local count_platform_difficulty = filter.count_unique(platform_difficulty)
@@ -138,3 +139,4 @@ end
 -- End section
 readme_file:write("\n")
 readme_file:close()
+
