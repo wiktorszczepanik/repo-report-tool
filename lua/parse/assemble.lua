@@ -1,6 +1,5 @@
 local assemble = {}
 
-
 function assemble.readme_table(count_category, count_category_difficulty, connector_char, difficulty_levels, split_l, split_m, split_r, sep)
     local category_table = {}
     for category, counted in pairs(count_category) do
@@ -25,6 +24,5 @@ function assemble.get_difficulty(difficulty_map, type, connector, levels)
     end
     return difficulty_values
 end
-
 
 return assemble

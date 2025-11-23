@@ -3,13 +3,12 @@ local filter = {}
 function filter.by_extension(unfiltered_list, ext)
     local filtered = {}
     for _, path in ipairs(unfiltered_list) do
-        if path:sub(-#ext) == ext then
+        if path:sub(- #ext) == ext then
             table.insert(filtered, path)
         end
     end
     return filtered
 end
-
 
 function filter.by_blacklist(unfiltered_list, black_list)
     local filtered = {}
@@ -28,7 +27,6 @@ function filter.by_blacklist(unfiltered_list, black_list)
     return filtered
 end
 
-
 function filter.md_chars(headers)
     local cleaned = {}
     for _, header in ipairs(headers) do
@@ -38,7 +36,6 @@ function filter.md_chars(headers)
     end
     return cleaned
 end
-
 
 function filter.get_type(headers, max_sub_key, type)
     local category = ""
@@ -51,7 +48,6 @@ function filter.get_type(headers, max_sub_key, type)
     return category
 end
 
-
 function filter.count_unique(values)
     local map = {}
     for _, value in ipairs(values) do
@@ -63,6 +59,5 @@ function filter.count_unique(values)
     end
     return map
 end
-
 
 return filter
