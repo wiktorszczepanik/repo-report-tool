@@ -7,6 +7,14 @@ local filter = require("parse.filter")
 local source = require("parse.source")
 local assemble = require("parse.assemble")
 
+-- Flags collector
+if #arg == 2 then
+    const.repo_directory_path = arg[1]
+    const.readme_file_path = arg[2]
+else
+    error("Incorrect number of flags", 0)
+end
+
 
 -- Start path
 local start_path = lfs.currentdir()
