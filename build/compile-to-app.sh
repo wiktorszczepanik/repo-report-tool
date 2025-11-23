@@ -1,7 +1,7 @@
 #!/bin/bash
 
 app_path="../app/app.lua"
-external_lib="local lfs = require("lfs")"
+external_lib="local lfs = require(\"lfs\")"
 
 touch $app_path
 echo "-- Merged version of repo-report-tool" > $app_path
